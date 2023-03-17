@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg-1: hsl(94, 52%, 90%);
+        --bg-2: hsl(94, 52%, 75%);
+        --bg-3: hsl(95, 53%, 60%);
+        --bg-4: hsl(95, 53%, 45%);
+        --bg-5: hsl(95, 53%, 30%);
+        --bg-6: hsl(95, 53%, 15%);
+      }
+
+      html {
+        font-family: "Roboto", sans-serif;
+        color: var(--bg-6);
+      }
+
+      header {
+        padding: 1rem 3rem;
+        background: var(--bg-4);
+        color: aliceblue;
+        position: sticky;
+        top: 0;
+      }
+
+      main {
+        background: var(--bg-1);
+      }
+
+      .wrapper {
+        width: 90%;
+        max-width: 80rem;
+        margin: auto;
+        /* background: var(--bg-2); */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-content: center;
+        justify-content: center;
+      }
+
+      .card {
+        border: 2px solid var(--bg-5);
+        background: var(--bg-3);
+        margin: 1rem;
+        padding: 0.5rem 2rem;
+        border-radius: 4px;
+        width: auto;
+      }
+
+      .card-title {
+        color: aliceblue;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-shadow: 1px 1px 3px var(--bg-5);
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-bottom: solid 1px var(--bg-5);
+      }
+
+      .card-content {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .card-visual,
+      .card-code {
+        padding: 1rem 2rem;
+        background: var(--bg-1);
+        border-radius: 4px;
+      }
+
+      @media (max-width: 700px) {
+        .wrapper {
+          grid-template-columns: 1fr;
+        }
+      }
