@@ -3,6 +3,7 @@ const cardList = [
     name: "Paragraf",
     code: `<p>tekst</p>
         <p style='color:red;'>tekst</p>
+        <br>
         <p style='font-weight:bold; '>tekst</p>
         <p style='font-weight:bold; color:red; '>tekst</p>`,
   },
@@ -35,7 +36,24 @@ const cardList = [
   },
   {
     name: "Kursywa",
-    code: `tekst <i>tekst</i> tekst`,
+    code: `tekst <i>tekst</i> tekst
+          <p style='font-style: italic; '>tekst</p>`,
+  },
+  {
+    name: "Link",
+    code: `<a href='https://www.google.com/'>Link</a>
+          <br>
+          <a target='_blank' href='https://www.google.com/'>Link - nowa karta</a>`,
+  },
+  {
+    name: "Podkreślenie",
+    code: `<u>tekst</u>
+          <p style='text-decoration: underline; '>tekst</p>`,
+  },
+  {
+    name: "Przekreślenie",
+    code: `<s>tekst</s>
+          <p style='text-decoration: line-through; '>tekst</p>`,
   },
 ];
 
