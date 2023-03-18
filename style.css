@@ -62,19 +62,17 @@ main {
   border-bottom: solid 1px var(--bg-5);
 }
 
-
 .card-visual,
 .card-code {
   padding: 1rem 2rem;
   background: var(--bg-1);
   border-radius: 4px;
-  border: 1px solid var(--bg-6)
+  border: 1px solid var(--bg-6);
 }
 
 .card-code {
   margin-bottom: 1rem;
 }
-
 
 @media (max-width: 600px) {
   .wrapper {
