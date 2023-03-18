@@ -21,15 +21,15 @@ const cardList = [
             <li>Element 2</li>
             <li>Element 3</li>
             </ul>`,
-      `<ul style='list-style: none; '>
+      `<ul style='list-style: none '>
             <li>Element 1</li>
             <li>Element 2</li>
             <li>Element 3</li>
             </ul>`,
       `<ul>
-            <li style='list-style: none; ' style='list-style: none; '>Element 1</li>
+            <li style='list-style: none ' style='list-style: none '>Element 1</li>
             <li>Element 2</li>
-            <li style='list-style: none; '>Element 3</li>
+            <li style='list-style: none '>Element 3</li>
             </ul>`,
     ],
   },
@@ -41,15 +41,15 @@ const cardList = [
             <li>Element 2</li>
             <li>Element 3</li>
             </ol>`,
-      `<ol style='list-style: none; '>
+      `<ol style='list-style: none '>
             <li>Element 1</li>
             <li>Element 2</li>
             <li>Element 3</li>
             </ol>`,
       `<ol>
-            <li style='list-style: none; ' style='list-style: none; '>Element 1</li>
+            <li style='list-style: none ' style='list-style: none '>Element 1</li>
             <li>Element 2</li>
-            <li style='list-style: none; '>Element 3</li>
+            <li style='list-style: none '>Element 3</li>
             </ol>`,
     ],
   },
@@ -57,14 +57,14 @@ const cardList = [
     name: "Bold",
     code: [
       `tekst <strong>tekst</strong> tekst`,
-      `tekst <span style='font-weight: bold; '>tekst</span> tekst`,
+      `tekst <span style='font-weight: bold '>tekst</span> tekst`,
     ],
   },
   {
     name: "Kursywa",
     code: [
       `tekst <i>tekst</i> tekst`,
-      `tekst <span style='font-style: italic; '>tekst</span> tekst`,
+      `tekst <span style='font-style: italic '>tekst</span> tekst`,
     ],
   },
   {
@@ -78,50 +78,49 @@ const cardList = [
     name: "Podkreślenie",
     code: [
       `<u>tekst</u>`,
-      `<span style='text-decoration: underline; '>tekst</span>`,
+      `<span style='text-decoration: underline '>tekst</span>`,
     ],
   },
   {
     name: "Przekreślenie",
     code: [
       `<s>tekst</s>`,
-      `<span style='text-decoration: line-through; '>tekst</span>`,
+      `<span style='text-decoration: line-through '>tekst</span>`,
     ],
   },
   {
     name: "Kolor tekstu",
     code: [
-      `<span style='color: red; '>tekst</span>`,
-      `<span style='color: #ff0000; '>tekst</span>`,
+      `<span style='color: red '>tekst</span>`,
+      `<span style='color: #ff0000 '>tekst</span>`,
     ],
   },
-];
+]
 
 // container for cards
-const wrapper = document.querySelector(".wrapper");
+const wrapper = document.querySelector(".wrapper")
 
 cardList.map((card, index) => {
-  console.log(card)
   // set the template
-  const cardItem = document.createElement("div");
-  cardItem.classList.add("card");
-  cardItem.setAttribute('key', index);
+  const cardItem = document.createElement("div")
+  cardItem.classList.add("card")
+  cardItem.setAttribute('key', index)
   cardItem.innerHTML += ` 
                 <div class="card-title">
                 </div>
-               `;
+               `
 
   // fill the template with data
-  cardItem.querySelector(".card-title").innerText = card.name;
+  cardItem.querySelector(".card-title").innerText = card.name
 
   card.code.map((snippet, index) => {
     console.log(snippet)
-    const visual = document.createElement('div');
+    const visual = document.createElement('div')
     visual.classList.add('card-visual')
     visual.setAttribute('key', index)
     visual.innerHTML = snippet
 
-    const code = document.createElement('div');
+    const code = document.createElement('div')
     code.classList.add('card-code')
     code.setAttribute('key', index)
     code.innerText = snippet
@@ -131,5 +130,5 @@ cardList.map((card, index) => {
   })
 
   // append the card to the wrapper
-  wrapper.appendChild(cardItem);
-});
+  wrapper.appendChild(cardItem)
+})
