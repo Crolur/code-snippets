@@ -27,7 +27,7 @@ const cardList = [
             <li>Element 3</li>
             </ul>`,
       `<ul>
-            <li style='list-style: none ' style='list-style: none '>Element 1</li>
+            <li style='list-style: none '>Element 1</li>
             <li>Element 2</li>
             <li style='list-style: none '>Element 3</li>
             </ul>`,
@@ -47,7 +47,7 @@ const cardList = [
             <li>Element 3</li>
             </ol>`,
       `<ol>
-            <li style='list-style: none ' style='list-style: none '>Element 1</li>
+            <li style='list-style: none '>Element 1</li>
             <li>Element 2</li>
             <li style='list-style: none '>Element 3</li>
             </ol>`,
@@ -71,7 +71,7 @@ const cardList = [
     name: "Link",
     code: [
       `<a href='https://www.google.com/'>Link</a>`,
-      `<a target='_blank' href='https://www.google.com/'>Link - nowa karta</a>`,
+      `<a target='_blank' href='https://www.google.com/' >Link - nowa karta</a>`,
     ],
   },
   {
