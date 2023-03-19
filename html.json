@@ -1,0 +1,70 @@
+{
+  "cardList": [
+    {
+      "name": "Paragraf",
+      "code": ["<p>tekst</p>\n<p>tekst</p>"]
+    },
+    {
+      "name": "Span",
+      "code": ["<span>tekst</span>\n<span>tekst</span>"]
+    },
+    {
+      "name": "Lista nieuporządkowana",
+      "code": [
+        "<ul>\n<li>Element 1</li>\n<li>Element 2</li>\n<li>Element 3</li>\n</ul>",
+        "<ul style='list-style: none '>\n<li>Element 1</li>\n<li>Element 2</li>\n<li>Element 3</li>\n</ul>",
+        "<ul>\n<li style='list-style: none '>Element 1</li>\n<li>Element 2</li>\n<li style='list-style: none '>Element 3</li>\n</ul>"
+      ]
+    },
+    {
+      "name": "Lista uporządkowana",
+      "code": [
+        "<ol>\n<li>Element 1</li>\n<li>Element 2</li>\n<li>Element 3</li>\n</ol>",
+        "<ol style='list-style: none '>\n<li>Element 1</li>\n<li>Element 2</li>\n<li>Element 3</li>\n</ol>",
+        "<ol>\n<li style='list-style: none '>Element 1</li>\n<li>Element 2</li>\n<li style='list-style: none '>Element 3</li>\n</ol>"
+      ]
+    },
+    {
+      "name": "Bold",
+      "code": [
+        "tekst <strong>tekst</strong> tekst",
+        "tekst <span style='font-weight: bold '>tekst</span> tekst"
+      ]
+    },
+    {
+      "name": "Kursywa",
+      "code": [
+        "tekst <i>tekst</i> tekst",
+        "tekst <span style='font-style: italic '>tekst</span> tekst"
+      ]
+    },
+    {
+      "name": "Link",
+      "code": [
+        "<a href='https://www.google.com/'>Link</a>",
+        "<a target='_blank' href='https://www.google.com/' >Link - nowa karta</a>"
+      ]
+    },
+    {
+      "name": "Podkreślenie",
+      "code": [
+        "<u>tekst</u>",
+        "<span style='text-decoration: underline '>tekst</span>"
+      ]
+    },
+    {
+      "name": "Przekreślenie",
+      "code": [
+        "<s>tekst</s>",
+        "<span style='text-decoration: line-through '>tekst</span>"
+      ]
+    },
+    {
+      "name": "Kolor tekstu",
+      "code": [
+        "<span style='color: red '>tekst</span>",
+        "<span style='color: #ff0000 '>tekst</span>"
+      ]
+    }
+  ]
+}
