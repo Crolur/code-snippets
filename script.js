@@ -4,7 +4,9 @@ const wrapper = document.querySelector(".wrapper")
 //fetch data from JSON
 fetch('html.json')
   .then(response => {
-    return response.json()
+    if(response.status === 200){
+      return response.json()
+    }
   })
   .then(data => {
     // execute printing function
