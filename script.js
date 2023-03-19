@@ -28,7 +28,6 @@ const printCards = data => {
     // fill the template with data
     cardItem.querySelector(".card-title").innerText = card.name
     card.code.map((snippet, index) => {
-      console.log(snippet)
       const visual = document.createElement('div')
       visual.classList.add('card-visual')
       visual.setAttribute('key', index)
