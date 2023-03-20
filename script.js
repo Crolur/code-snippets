@@ -45,3 +45,25 @@ const printCards = data => {
     wrapper.appendChild(cardItem)
   })
 }
+
+// copy to clipboard
+copiedLabel = document.querySelector('.copied')
+
+const copy = (e) => {
+  const toCopy = document.createElement('textArea')
+  toCopy.value = e.target.innerText
+  document.body.appendChild(toCopy)
+  toCopy.select()
+  document.execCommand('Copy')
+  toCopy.remove()
+  copiedLabel.classList.add('slide')
+  setTimeout(() => {
+    copiedLabel.classList.remove('slide')
+  }, 1500)
+} 
+
+wrapper.addEventListener('click', e => {
+  if(e.target.classList.contains('card-code')){
+    copy(e)
+  }
+})

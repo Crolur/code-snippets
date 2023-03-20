@@ -11,7 +11,7 @@
   --bg-2: hsl(94, 52%, 75%);
   --bg-3: hsl(95, 53%, 60%);
   --bg-4: hsl(95, 53%, 45%);
-  --bg-5: hsl(95, 53%, 30%);
+  --bg-5: #467524;
   --bg-6: hsl(95, 53%, 15%);
 }
 
@@ -21,16 +21,37 @@ html {
 }
 
 header {
-  padding: 1rem 3rem;
+  padding: .5rem 3rem;
   background: var(--bg-4);
   color: aliceblue;
   position: sticky;
-  top: 0;
+  top: 0px;
   box-shadow: 0px 1px 10px 0px var(--bg-6);
+  z-index: 2;
+  word-spacing: -.5rem;
 }
 
 main {
   background: var(--bg-1);
+}
+
+.copied {
+  display: block;
+  transform: translateX(calc(50vw - 50%)) translateY(-100%);
+  width: fit-content;
+  padding: 1rem;
+  position: fixed;
+  background: var(--bg-5);
+  color: white;
+  font-weight: bold;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 1;
+  transition: transform .2s ease-out;
+}
+
+.slide{
+  transform: translateX(calc(50vw - 50%)) translateY(0%);
 }
 
 .wrapper {
@@ -70,15 +91,29 @@ main {
 
 .card-visual,
 .card-code {
-  padding: 1rem 2rem;
+  position: relative;
   background: var(--bg-1);
   border-radius: 4px;
   border: 1px solid var(--bg-6);
-  line-break: anywhere;
 }
 
 .card-visual {
   line-break: auto;
+  padding: 1rem 2rem;
+}
+
+.card-code {
+  padding: 1rem;
+  overflow-x: scroll;
+  white-space: nowrap;
+  cursor: pointer;
+  scrollbar-width: thin;
+  cursor: pointer;
+}
+
+.card-code:hover,
+.card-code:active {
+  box-shadow: 0px 0px 5px 1px var(--bg-6);
 }
 
 footer {
@@ -100,6 +135,10 @@ footer a {
 }
 
 @media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
   .wrapper {
     width: 100%;
     padding-left: 0;
