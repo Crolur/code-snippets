@@ -108,7 +108,6 @@ main {
   white-space: nowrap;
   cursor: pointer;
   scrollbar-width: thin;
-  cursor: pointer;
 }
 
 .card-code:hover,

@@ -4,7 +4,7 @@ const wrapper = document.querySelector(".wrapper")
 //fetch data from JSON
 fetch('html.json')
   .then(response => {
-    if(response.status === 200){
+    if (response.status === 200) {
       return response.json()
     }
   })
@@ -60,10 +60,10 @@ const copy = (e) => {
   setTimeout(() => {
     copiedLabel.classList.remove('slide')
   }, 1500)
-} 
+}
 
 wrapper.addEventListener('click', e => {
-  if(e.target.classList.contains('card-code')){
+  if (e.target.classList.contains('card-code')) {
     copy(e)
   }
 })
