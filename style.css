@@ -18,6 +18,7 @@
 html {
   font-family: "Roboto Mono", monospace;
   color: var(--bg-6);
+  scrollbar-width: thin;
 }
 
 header {
@@ -91,6 +92,8 @@ main {
 
 .card-visual,
 .card-code {
+  display: flex;
+  align-items: center;
   position: relative;
   background: var(--bg-1);
   border-radius: 4px;
@@ -100,6 +103,10 @@ main {
 .card-visual {
   line-break: auto;
   padding: 1rem 2rem;
+}
+
+.card-visual ol {
+  margin-left: 1rem;
 }
 
 .card-code {
