@@ -67,3 +67,13 @@ wrapper.addEventListener('click', e => {
     copy(e)
   }
 })
+
+
+// accordion
+
+wrapper.addEventListener('click', (e) => {
+  if(e.target.classList.contains('card-title')) {
+    e.target.classList.toggle('closed')
+    e.target.parentElement.classList.toggle('closed')
+  }
+})
