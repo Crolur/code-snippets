@@ -105,7 +105,7 @@ main {
   transition: transform .1s linear;
 }
 
-.accordion-title.closed::after {
+.card-title.closed::after {
   transform: rotateX(180deg)
 }
 
