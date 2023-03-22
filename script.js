@@ -7,7 +7,9 @@ fetch('html.json')
   })
   .then(cards => {
     // execute rendering function
+    console.time('start')
     renderPage(cards.cardList)
+    console.timeLog('start')
   })
   .catch(err => {
     console.log(err.message)
@@ -72,7 +74,6 @@ const createCardVisualElement = code => {
   const visualElement = document.createElement('div')
   visualElement.classList.add('card-visual')
   visualElement.innerHTML = code
-  console.log(visualElement)
 
   return visualElement
 }
