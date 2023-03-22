@@ -111,16 +111,10 @@ main {
 
 .card-visual,
 .card-code {
-  display: flex;
-  align-items: center;
   position: relative;
   background: var(--bg-1);
   border-radius: 4px;
   border: 1px solid var(--bg-6);
-}
-
-.card-visual {
-  line-break: auto;
   padding: 1rem 2rem;
 }
 
