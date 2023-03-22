@@ -71,8 +71,8 @@ const createCardTitleElement = card => {
 const createCardVisualElement = code => {
   const visualElement = document.createElement('div')
   visualElement.classList.add('card-visual')
-
   visualElement.innerHTML = code
+  console.log(visualElement)
 
   return visualElement
 }
