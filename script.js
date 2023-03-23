@@ -17,6 +17,7 @@ fetch('html.json')
 const renderPage = (cards) => {
   const main = document.querySelector('main')
   main.appendChild(createCopiedLabel())
+  main.appendChild(createSideMenu(cards))
   main.appendChild(createWrapper(cards))
   setEventListeners()
 }
@@ -36,9 +37,10 @@ const createWrapper = (cards) => {
   wrapper.classList.add('wrapper')
 
   // create card element
-  cards.forEach(card => {
+  cards.forEach((card, index) => {
     const cardElement = document.createElement('div')
     cardElement.classList.add('card')
+    cardElement.setAttribute('id', index)
     wrapper.appendChild(cardElement)
 
     // create title element
@@ -64,10 +66,30 @@ const createWrapper = (cards) => {
   return wrapper
 }
 
+const createSideMenu = (cards) => {
+  const sideMenu = document.createElement('div')
+  sideMenu.classList.add('side-menu')
+
+  const sideMenuList = document.createElement('ul')
+  sideMenu.appendChild(sideMenuList)
+
+  cards.forEach((card, index) => {
+    const sideMenuListItem = document.createElement('li')
+    const sideMenuListItemLink = document.createElement('a')
+    sideMenuListItemLink.setAttribute('href', '#' + index)
+    sideMenuListItem.appendChild(sideMenuListItemLink)
+    sideMenuListItemLink.innerText = card.name
+    sideMenuList.appendChild(sideMenuListItem)
+  })
+
+
+  return sideMenu
+}
 
 // setting event listener for different actions
 const setEventListeners = () => {
   const wrapper = document.querySelector('.wrapper')
+  const sideMenu = document.querySelector('.side-menu')
 
   wrapper.addEventListener('click', (e) => {
     // execute copy to clipboard function
@@ -80,6 +102,10 @@ const setEventListeners = () => {
       e.target.classList.toggle('closed')
       e.target.parentElement.classList.toggle('closed')
     }
+  })
+
+  sideMenu.addEventListener('click', e => {
+    sideMenu.classList.toggle('open')
   })
 }
 
