@@ -7,15 +7,13 @@ fetch('html.json')
   })
   .then(cards => {
     // execute rendering function
-    console.time('start')
     renderPage(cards.cardList)
-    console.timeLog('start')
   })
   .catch(err => {
     console.log(err.message)
   })
 
-// rendering function
+// page rendering function
 const renderPage = (cards) => {
   const main = document.querySelector('main')
   main.appendChild(createCopiedLabel())
@@ -30,63 +28,42 @@ const createCopiedLabel = () => {
   copiedLabel.innerText = 'Skopiowano!'
 
   return copiedLabel
-} 
+}
 
-// create wrapper for cards
+// create wrapper with cards
 const createWrapper = (cards) => {
   const wrapper = document.createElement('div')
   wrapper.classList.add('wrapper')
 
+  // create card element
   cards.forEach(card => {
-    wrapper.appendChild(createCardElement(card))
+    const cardElement = document.createElement('div')
+    cardElement.classList.add('card')
+    wrapper.appendChild(cardElement)
+
+    // create title element
+    const titleElement = document.createElement('div')
+    titleElement.classList.add('card-title')
+    titleElement.innerText = card.name
+    cardElement.appendChild(titleElement)
+
+    //create visual and code elements
+    card.code.forEach(code => {
+      const visualElement = document.createElement('div')
+      visualElement.classList.add('card-visual')
+      visualElement.innerHTML = code
+      cardElement.appendChild(visualElement)
+
+      const codeElement = document.createElement('div')
+      codeElement.classList.add('card-code')
+      codeElement.innerText = code
+      cardElement.appendChild(codeElement)
+    })
   });
 
   return wrapper
 }
 
-// create and append cards to wrapper
-const createCardElement = (card) => {
-  const cardElement = document.createElement('div')
-  cardElement.classList.add('card')
-
-  cardElement.appendChild(createCardTitleElement(card))
-
-  card.code.forEach(code => {
-    cardElement.appendChild(createCardVisualElement(code))
-    cardElement.appendChild(createCardCodeElement(code))
-  })
-
-  return cardElement
-}
-
-// create and append title to card
-const createCardTitleElement = card => {
-  const titleElement = document.createElement('div')
-  titleElement.classList.add('card-title')
-
-  titleElement.innerText = card.name
-
-  return titleElement
-}
-
-// create and append visual to card
-const createCardVisualElement = code => {
-  const visualElement = document.createElement('div')
-  visualElement.classList.add('card-visual')
-  visualElement.innerHTML = code
-
-  return visualElement
-}
-
-// create and append code to card
-const createCardCodeElement = code => {
-  const codeElement = document.createElement('div')
-  codeElement.classList.add('card-code')
-
-  codeElement.innerText = code
-
-  return codeElement
-}
 
 // setting event listener for different actions
 const setEventListeners = () => {
