@@ -78,7 +78,7 @@ main {
 }
 
 .side-menu::before {
-  content: url(/icons/caret-left-fill.svg);
+  content: url('icons/caret-left-fill.svg');
   cursor: pointer;
   padding: 1rem 0;
   height: 1rem;
@@ -91,7 +91,7 @@ main {
 }
 
 .side-menu.open::before {
-  content: url(/icons/caret-right-fill.svg);
+  content: url('icons/caret-right-fill.svg');
 }
 
 .side-menu a {
