@@ -66,6 +66,7 @@ const createWrapper = (cards) => {
   return wrapper
 }
 
+// create side menu with links to cards
 const createSideMenu = (cards) => {
   const sideMenu = document.createElement('div')
   sideMenu.classList.add('side-menu')
@@ -81,7 +82,6 @@ const createSideMenu = (cards) => {
     sideMenuListItemLink.innerText = card.name
     sideMenuList.appendChild(sideMenuListItem)
   })
-
 
   return sideMenu
 }

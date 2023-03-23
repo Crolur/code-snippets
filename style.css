@@ -23,14 +23,14 @@ html {
 }
 
 header {
-  padding: .5rem 3rem;
+  padding: 0.5rem 3rem;
   background: var(--bg-4);
   color: aliceblue;
   position: sticky;
   top: 0px;
   box-shadow: 0px 1px 10px 0px var(--bg-6);
   z-index: 2;
-  word-spacing: -.5rem;
+  word-spacing: -0.5rem;
 }
 
 main {
@@ -49,10 +49,10 @@ main {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   z-index: 1;
-  transition: transform .2s ease-out;
+  transition: transform 0.2s ease-out;
 }
 
-.slide{
+.slide {
   transform: translateX(calc(50vw - 50%)) translateY(0%);
 }
 
@@ -62,7 +62,7 @@ main {
   position: fixed;
   right: 0;
   top: 5rem;
-  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
   backdrop-filter: blur(2px);
   color: white;
   text-shadow: var(--bg-6) 2px 2px 3px;
@@ -70,7 +70,7 @@ main {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   transform: translateX(100%);
-  transition: transform .2s linear;
+  transition: transform 0.2s linear;
 }
 
 .side-menu.open {
@@ -78,7 +78,7 @@ main {
 }
 
 .side-menu::before {
-  content: url('icons/caret-left-fill.svg');
+  content: url("icons/caret-left-fill.svg");
   cursor: pointer;
   padding: 1rem 0rem;
   height: 1rem;
@@ -91,7 +91,7 @@ main {
 }
 
 .side-menu.open::before {
-  content: url('icons/caret-right-fill.svg');
+  content: url("icons/caret-right-fill.svg");
 }
 
 .side-menu a {
@@ -99,7 +99,7 @@ main {
   color: inherit;
   display: inline-block;
   width: 100%;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .side-menu ul {
@@ -111,7 +111,7 @@ main {
   border-bottom-left-radius: 6px;
   font-weight: bold;
   background: transparent;
-  transition: background .1s linear;
+  transition: background 0.1s linear;
   cursor: pointer;
 }
 
@@ -137,8 +137,8 @@ main {
   background: var(--bg-3);
   margin: 1rem auto;
   width: 100%;
-  padding: .5rem 1rem 2rem 1rem;
-   border-radius: 4px;
+  padding: 0.5rem 1rem 2rem 1rem;
+  border-radius: 4px;
   box-shadow: 2px 2px 8px 0px var(--bg-6);
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -166,14 +166,14 @@ main {
 }
 
 .card-title::after {
-  content: url('icons/chevron-up.svg');
+  content: url("icons/chevron-up.svg");
   scale: 1.3;
   transform: rotateX(0);
-  transition: transform .1s linear;
+  transition: transform 0.1s linear;
 }
 
 .card-title.closed::after {
-  transform: rotateX(180deg)
+  transform: rotateX(180deg);
 }
 
 .card-visual,
@@ -234,13 +234,12 @@ footer a {
   .card {
     grid-template-columns: 1fr;
   }
-  
+
   .card-title {
     grid-column: span 1;
   }
 
   .card-visual {
     margin-bottom: -1.5rem;
-
   }
 }
