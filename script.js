@@ -49,7 +49,7 @@ const createWrapper = (cards) => {
   cards.forEach((card, index) => {
     const cardElement = document.createElement('div')
     cardElement.classList.add('card')
-    cardElement.setAttribute('id', index)
+    cardElement.setAttribute('id', 'c' + index)
     wrapper.appendChild(cardElement)
 
     // create title element
@@ -86,7 +86,8 @@ const createSideMenu = (cards) => {
   cards.forEach((card, index) => {
     const sideMenuListItem = document.createElement('li')
     const sideMenuListItemLink = document.createElement('a')
-    sideMenuListItemLink.setAttribute('href', '#' + index)
+    sideMenuListItemLink.classList.add('side-menu__link')
+    sideMenuListItemLink.setAttribute('href', '#c' + index)
     sideMenuListItem.appendChild(sideMenuListItemLink)
     sideMenuListItemLink.innerText = card.name
     sideMenuList.appendChild(sideMenuListItem)
@@ -113,9 +114,28 @@ const setEventListeners = () => {
     }
   })
 
-  sideMenu.addEventListener('click', e => {
+  // open side menu
+  sideMenu.addEventListener('click', () => {
     sideMenu.classList.toggle('open')
   })
+
+  // blink after navigating to card
+  sideMenu.addEventListener('click', e => {
+    if(e.target.classList.contains('side-menu__link')){
+      // get value of href
+      const blinkElementId = e.target.attributes.href.value.replace('#', '')
+
+      // change style of card with id like the href
+      const blinkElement = document.querySelector(`#${blinkElementId}`)
+      blinkElement.classList.add('blink')
+      setTimeout(() => {
+        blinkElement.classList.remove('blink')
+      }, 1000)
+      
+
+    }
+  })
+
 }
 
 
