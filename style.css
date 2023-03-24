@@ -7,34 +7,34 @@
 }
 
 :root {
-  --bg-1: hsl(94, 52%, 90%);
-  --bg-2: hsl(94, 52%, 75%);
-  --bg-3: hsl(95, 53%, 60%);
-  --bg-4: hsl(95, 53%, 45%);
-  --bg-5: hsl(95, 53%, 30%);
-  --bg-6: hsl(95, 53%, 15%);
+  --green-1: hsl(94, 52%, 90%);
+  --green-2: hsl(94, 52%, 75%);
+  --green-3: hsl(95, 53%, 60%);
+  --green-4: hsl(95, 53%, 45%);
+  --green-5: hsl(95, 53%, 30%);
+  --green-6: hsl(95, 53%, 15%);
 }
 
 html {
   font-family: "Roboto Mono", monospace;
-  color: var(--bg-6);
+  color: var(--green-6);
   scrollbar-width: thin;
   scroll-behavior: smooth;
 }
 
 header {
   padding: 0.5rem 3rem;
-  background: var(--bg-4);
+  background: var(--green-4);
   color: aliceblue;
   position: sticky;
   top: 0px;
-  box-shadow: 0px 1px 10px 0px var(--bg-6);
+  box-shadow: 0px 1px 10px 0px var(--green-6);
   z-index: 2;
   word-spacing: -0.5rem;
 }
 
 main {
-  background: var(--bg-1);
+  background: var(--green-1);
 }
 
 .copied {
@@ -43,7 +43,7 @@ main {
   width: fit-content;
   padding: 1rem;
   position: fixed;
-  background: var(--bg-5);
+  background: var(--green-5);
   color: white;
   font-weight: bold;
   border-bottom-left-radius: 10px;
@@ -65,7 +65,7 @@ main {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
   backdrop-filter: blur(2px);
   color: white;
-  text-shadow: var(--bg-6) 2px 2px 3px;
+  text-shadow: var(--green-6) 2px 2px 3px;
   padding: 1rem 0 1rem 1rem;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
@@ -83,7 +83,7 @@ main {
   padding: 1rem 0rem;
   height: 1rem;
   width: 1.5rem;
-  background: var(--bg-5);
+  background: var(--green-5);
   position: absolute;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
@@ -116,8 +116,8 @@ main {
 }
 
 .side-menu li:hover {
-  background: var(--bg-1);
-  color: var(--bg-6);
+  background: var(--green-1);
+  color: var(--green-6);
   text-shadow: white 2px 2px 3px;
 }
 
@@ -125,21 +125,21 @@ main {
   width: 90%;
   max-width: 80rem;
   margin: auto;
-  background: var(--bg-2);
+  background: var(--green-2);
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 0px 20px 0px var(--bg-5);
+  box-shadow: 0px 0px 20px 0px var(--green-5);
 }
 
 .card {
-  border: 2px solid var(--bg-5);
-  background: var(--bg-3);
+  border: 2px solid var(--green-5);
+  background: var(--green-3);
   margin: 1rem auto;
   width: 100%;
   padding: 0.5rem 1rem 2rem 1rem;
   border-radius: 4px;
-  box-shadow: 2px 2px 8px 0px var(--bg-6);
+  box-shadow: 2px 2px 8px 0px var(--green-6);
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 1rem;
@@ -156,9 +156,9 @@ main {
   color: aliceblue;
   font-weight: bold;
   font-size: 1.2rem;
-  text-shadow: 1px 1px 5px var(--bg-6);
+  text-shadow: 1px 1px 5px var(--green-6);
   padding-bottom: 0.5rem;
-  border-bottom: solid 1px var(--bg-5);
+  border-bottom: solid 1px var(--green-5);
   grid-column: span 2;
   cursor: pointer;
   display: flex;
@@ -179,9 +179,9 @@ main {
 .card-visual,
 .card-code {
   position: relative;
-  background: var(--bg-1);
+  background: var(--green-1);
   border-radius: 4px;
-  border: 1px solid var(--bg-6);
+  border: 1px solid var(--green-6);
   padding: 1rem 2rem;
 }
 
@@ -199,11 +199,11 @@ main {
 
 .card-code:hover,
 .card-code:active {
-  box-shadow: 0px 0px 5px 1px var(--bg-6);
+  box-shadow: 0px 0px 5px 1px var(--green-6);
 }
 
 footer {
-  background: var(--bg-6);
+  background: var(--green-6);
   color: aliceblue;
   display: flex;
   flex-direction: column;

@@ -17,10 +17,19 @@ fetch('html.json')
 const renderPage = (cards) => {
   const main = document.querySelector('main')
   main.appendChild(createCopiedLabel())
+  sortAlphabetically(cards)
   main.appendChild(createSideMenu(cards))
   main.appendChild(createWrapper(cards))
   setEventListeners()
 }
+
+// sorting elements alphabetically
+const sortAlphabetically = (cards) => {
+  cards.sort((firstItem, secondItem) => firstItem.name.charCodeAt() - secondItem.name.charCodeAt())
+
+  return cards
+} 
+
 
 // create copied label
 const createCopiedLabel = () => {
