@@ -28,7 +28,7 @@ const sortAlphabetically = (cards) => {
   cards.sort((firstItem, secondItem) => firstItem.name.charCodeAt() - secondItem.name.charCodeAt())
 
   return cards
-} 
+}
 
 
 // create copied label
@@ -121,7 +121,7 @@ const setEventListeners = () => {
 
   // blink after navigating to card
   sideMenu.addEventListener('click', e => {
-    if(e.target.classList.contains('side-menu__link')){
+    if (e.target.classList.contains('side-menu__link')) {
       // get value of href
       const blinkElementId = e.target.attributes.href.value.replace('#', '')
 
@@ -131,8 +131,6 @@ const setEventListeners = () => {
       setTimeout(() => {
         blinkElement.classList.remove('blink')
       }, 1000)
-      
-
     }
   })
 
