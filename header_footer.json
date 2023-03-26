@@ -1,8 +1,8 @@
 {
-    "header_footer":[
-        {
-            "name": "HTML - inline CSS",
-            "link": "index.html"
-        }
-    ]
+  "header_footer": [
+    {
+      "name": "HTML - inline CSS",
+      "link": "index.html"
+    }
+  ]
 }
