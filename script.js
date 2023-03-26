@@ -1,25 +1,4 @@
-//fetch header and footer content from JSON
-fetch('header_footer.json')
-  .then(response => {
-    if (response.status === 200) {
-      return response.json()
-    }
-  })
-  .then(headerFooterData => {
-    // render header
-    const header = document.querySelector('header')
-    header.appendChild(createHeader(headerFooterData))
-
-    // render footer
-    const footer = document.querySelector('footer')
-    footer.appendChild(createFooter(headerFooterData))
-  })
-  .catch(err => {
-    console.log(err.message)
-  })
-
-
-//fetch main content from JSON
+//fetch data from JSON
 fetch('html.json')
   .then(response => {
     if (response.status === 200) {
@@ -36,14 +15,11 @@ fetch('html.json')
 
 // page rendering function
 const renderPage = (cards) => {
-  // render main content
   const main = document.querySelector('main')
   main.appendChild(createCopiedLabel())
   sortAlphabetically(cards)
   main.appendChild(createSideMenu(cards))
   main.appendChild(createWrapper(cards))
-
-  // set all event listeners
   setEventListeners()
 }
 
@@ -62,32 +38,6 @@ const createCopiedLabel = () => {
   copiedLabel.innerText = 'Skopiowano!'
 
   return copiedLabel
-}
-
-// create header
-const createHeader = (headerFooterData) => {
-  const headerElement = document.createElement('h1')
-  headerElement.innerText = headerFooterData.header_footer[0].name
-
-  return headerElement
-}
-
-// create footer
-const createFooter = (headerFooterData) => {
-  const footerElement = document.createElement('ul')
-
-  headerFooterData.header_footer.forEach(e => {
-    const footerElementItemLink = document.createElement('a')
-    footerElementItemLink.setAttribute('href', e.link)
-    footerElementItemLink.innerText = e.name
-
-    const footerElementItem = document.createElement('li')
-    footerElementItem.appendChild(footerElementItemLink)
-
-    footerElement.appendChild(footerElementItem)
-  })
-
-  return footerElement
 }
 
 // create wrapper with cards
@@ -173,18 +123,17 @@ const setEventListeners = () => {
   sideMenu.addEventListener('click', e => {
     if (e.target.classList.contains('side-menu__link')) {
       // get value of href
-      const blinkElementId = e.target.attributes.href.value
+      const blinkElementId = e.target.attributes.href.value.replace('#', '')
 
       // change style of card with id like the href
-      const blinkElement = document.querySelector(`${blinkElementId}`)
-      blinkElement.classList.remove('closed')
-      blinkElement.querySelector('.card-title').classList.remove('closed')
+      const blinkElement = document.querySelector(`#${blinkElementId}`)
       blinkElement.classList.add('blink')
       setTimeout(() => {
         blinkElement.classList.remove('blink')
       }, 1000)
     }
   })
+
 }
 
 

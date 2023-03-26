@@ -146,8 +146,7 @@ main {
   row-gap: 2rem;
   overflow: hidden;
   scroll-margin-top: 4rem;
-  transition: border-color 1s cubic-bezier(0.18, 0.89, 0.32, 1.28),
-    box-shadow 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: border-color 1s cubic-bezier(.18,.89,.32,1.28), box-shadow 1s cubic-bezier(.18,.89,.32,1.28);
 }
 
 .card.closed {
