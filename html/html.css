@@ -1,0 +1,74 @@
+:root {
+  --green-1: hsl(95, 52%, 90%);
+  --green-2: hsl(95, 52%, 75%);
+  --green-3: hsl(95, 53%, 60%);
+  --green-4: hsl(95, 53%, 45%);
+  --green-5: hsl(95, 53%, 30%);
+  --green-6: hsl(95, 53%, 15%);
+}
+
+html {
+  color: var(--green-6);
+}
+
+header {
+  background: var(--green-4);
+}
+
+main {
+  background: var(--green-1);
+}
+
+.copied {
+  background: var(--green-5);
+}
+
+
+.side-menu {
+  text-shadow: var(--green-6) 2px 2px 3px;
+}
+
+.side-menu::before {
+  background: var(--green-5);
+}
+
+.side-menu li:hover {
+  background: var(--green-1);
+  color: var(--green-6);
+}
+
+.wrapper {
+  background: var(--green-2);
+  box-shadow: 0px 0px 20px 0px var(--green-5);
+}
+
+.card {
+  border: 2px solid var(--green-5);
+  background: var(--green-3);
+  box-shadow: 2px 2px 8px 0px var(--green-6);
+}
+
+.card.blink {
+  border-color: var(--green-1);
+  box-shadow: 2px 2px 8px 0px var(--green-1);
+}
+
+.card-title {
+  text-shadow: 1px 1px 5px var(--green-6);
+  border-bottom: solid 1px var(--green-5);
+}
+
+.card-visual,
+.card-code {
+  background: var(--green-1);
+  border: 1px solid var(--green-6);
+}
+
+.card-code:hover,
+.card-code:active {
+  box-shadow: 0px 0px 5px 1px var(--green-6);
+}
+
+footer {
+  background: var(--green-6);
+}
