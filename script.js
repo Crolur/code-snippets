@@ -1,8 +1,7 @@
-addEventListener("touchend", (event) => {});
-
-ontouchend = (event) => {
+addEventListener("touchend", (event) => {
   navigator.vibrate(2000);
-};
+});
+
 
 //fetch data from JSON
 fetch('html.json')
