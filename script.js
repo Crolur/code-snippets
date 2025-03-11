@@ -1,3 +1,4 @@
+navigator.vibrate(2000);
 //fetch data from JSON
 fetch('html.json')
   .then(response => {
